@@ -4,9 +4,13 @@ const marcar = document.getElementById('marcar')
 let digitos = document.getElementById('it')
 
 enviar.addEventListener('click', () =>{
+     if(digitos.value.length){
+          alert('Não é possível adicionar um item vazio')
+     } else {
     const nLI = document.createElement('li')
     nLI.textContent = digitos.value
     lista.appendChild(nLI)
     digitos.value =''
+    }
 })
  // Não é possível adicionar uma classe a um texto de input, então a funcionalidade de importante não vai ocorrer.
