@@ -4,7 +4,7 @@ const marcar = document.getElementById('marcar')
 let digitos = document.getElementById('it')
 
 enviar.addEventListener('click', () =>{
-     if(digitos.value.length){
+     if(digitos.value.length === 0){
           alert('Não é possível adicionar um item vazio')
      } else {
     const nLI = document.createElement('li')
