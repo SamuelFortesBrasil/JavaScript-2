@@ -1,0 +1,49 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: large;
+}
+
+.caixa{
+    border: solid black 5px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+    max-width: 700px;
+}
+
+.verde{
+    border-color: rgb(55, 124, 55);
+    background-color: rgb(76, 182, 76);
+}
+
+.azul{
+    border-color: rgb(51, 175, 206);
+    background-color: rgb(26, 200, 206);
+}
+
+.vermelho{
+    border-color: rgb(161, 12, 12);
+    background-color:rgb(233, 46, 46) ;
+}
+
+button{
+    width: 150px;
+    height: 25px;
+    background-color: rgb(26, 140, 168);
+    color: white;
+    border-radius: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#caixaPesquisar input{
+    padding: 10px;
+    border-radius: 5px;
+    width: 550px;
+}
