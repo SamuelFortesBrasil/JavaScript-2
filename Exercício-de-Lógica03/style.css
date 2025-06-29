@@ -1,0 +1,87 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+#calculadora {
+  width: 300px;
+  height: 250px;
+  margin: auto;
+  border: 2px solid black;
+  border-radius: 5px;
+  position: relative;
+  padding-bottom: 120px;
+  background-color: #a7a6a6;
+}
+
+#entradaV{
+    display: flex;
+    background-color: white;
+    max-width: 270px;
+    height: 170px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+    border: black solid 1px;
+    position: relative;
+}
+
+#v1,#v2{
+    max-width: 120px;
+    height: 50px;
+    border: black solid;
+    text-align: center;
+    font-size: 35px;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+#sinal{
+    display: inline;
+    font-size: 60px;
+    font-weight: bold;
+    height: 50px;
+    position: absolute;
+    left: 50px;
+    top: 100px;
+    
+}
+
+#saidaV{
+    display: inline;
+    font-size: 40px;
+    font-weight: bold;
+    height: 50px;
+    position: absolute;
+    right: 10px;
+    top: 110px;
+
+}
+
+
+#botoes {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.bt {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
