@@ -64,5 +64,3 @@ bt_igual.addEventListener('click',() =>{
     const resultado = calculos[operacao]()
     resposta.innerHTML = resultado
 })
-
-console.log(calculos[3])
