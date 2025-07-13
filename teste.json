@@ -1,0 +1,14 @@
+{
+    "Pessoa1":{
+        "nome": "Samuel",
+        "idade":17,
+        "Trabalhando": true,
+        "Estudando": true
+    },
+    "Pessoa2":{
+        "nome":"Isaac",
+        "idade": 8,
+        "Trabalhando":false,
+        "Estudando": true
+    }
+}
