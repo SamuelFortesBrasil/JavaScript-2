@@ -19,7 +19,7 @@ teclasNum.map((e) =>{
                     decimal = true
                 }
             }
-            if(verificarTela == true){
+            if(tela.innerHTML == '0' && tela.innerHTML !== ','){
                 tela.innerHTML = el.target.innerHTML
                 verificarTela = false
             }else{
