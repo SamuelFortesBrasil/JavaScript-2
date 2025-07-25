@@ -1,0 +1,113 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    box-sizing: border-box;
+    font-size: large;
+}
+
+.dflex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    top: 0px;    
+    left: -230px;
+    transition: all 0.5s;
+}
+
+.calc_exibir{
+    left: 0px !important;
+}
+
+#calc_principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #aaa;
+    border: 3px solid black;
+    width: 230px;
+    margin: auto;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.nome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+
+}
+
+.display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+}
+
+.tdisplay{
+     width: 220px;
+     background-color: #e7e7e7;
+     text-align: right;
+     padding: 5px;
+     font-family: monospace;
+}
+
+.teclas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    flex-wrap: wrap;
+}
+
+.tecla{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #48b6c5;
+    border: 3px solid #1e4449;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 1px;
+}
+
+#copia{
+    background-color: #48b6c5;
+    border: 3px solid #1e4449;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+#bt_retratil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 30px;
+    -webkit-text-stroke-width: 0.7px;
+    -webkit-text-stroke-color: black;
+    border: 1px solid black;
+    border-radius: 0px 5px 5px 0px;
+    font-family: monospace;
+    font-weight: bolder;
+    color: white;
+    background-image: linear-gradient(rgb(224, 161, 161),rgb(226, 0, 0),rgb(241, 115, 115));
+    cursor: pointer;
+}
