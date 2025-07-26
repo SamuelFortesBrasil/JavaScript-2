@@ -1,0 +1,49 @@
+#relogio{
+    margin: auto;
+    color: rgb(0, 195, 255);
+    background-color: rgb(77, 77, 77);
+    padding: 5px;
+    text-align: center;
+    width: 90px;
+    border-radius: 2px;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#timer{
+    border: 5px solid black;
+    width: 350px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: rgb(241, 241, 241);
+}
+
+#tempoAlarme{
+    font-family: monospace;
+    width: 35px;
+    text-align: center;
+}
+
+#comandos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btControle{
+    font-weight: bold ;
+    background-color: rgb(151, 151, 151);
+    border-radius: 5px;
+    border: 1px solid;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.alarme{
+    background-color: #f00 !important;
+}
