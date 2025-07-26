@@ -1,0 +1,12 @@
+#relogio{
+    margin: auto;
+    color: rgb(0, 195, 255);
+    background-color: gray;
+    padding: 5px;
+    text-align: center;
+    width: 90px;
+    border-radius: 2px;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: larger;
+}
