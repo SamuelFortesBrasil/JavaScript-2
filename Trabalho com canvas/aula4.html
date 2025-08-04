@@ -1,0 +1,32 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #meuCanvas{
+            border: 1px solid black;
+            border-radius: 2px;
+        }
+    </style>
+        <script>
+            let x = 0
+            let y = 0
+            let anima 
+            let i = 0
+            const desenha = () =>{
+                const meuCanvas = document.getElementById('meuCanvas')
+                const contexto = meuCanvas.getContext('2d')
+                contexto.clearRect(0,0,500,500)
+                contexto.fillRect(x,y,50,50)
+                x++
+                //i++
+                anima = requestAnimationFrame(desenha)
+            }
+    </script>
+    <title>Aula 4</title>
+</head>
+<body onload="desenha()">
+    <canvas id="meuCanvas" height="500" width="500" style="border: 1px solid black; border-radius: 2px;">
+    </canvas>
+</body>
+</html>

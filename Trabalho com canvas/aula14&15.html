@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 14 e 15</title>
+    <script src="jogador.js"></script>
+</head>
+<body>
+    <canvas id="meuCanvas" height="500" width="500" style="border: 1px solid black; border-radius: 2px;">
+    </canvas>
+    <script>
+        const canva = document.getElementById('meuCanvas')
+        const contexto = canva.getContext('2d')      
+
+        const teclado ={
+            esquerda: false,
+            direita:false
+        }
+
+        const jogador = new Jogador(contexto,teclado)
+         
+         window.addEventListener('keydown',(e) =>{
+            if(e.keyCode == 37){
+                teclado.esquerda = true
+            } else if(e.keyCode == 39){
+                teclado.direita = true
+            }
+         })
+
+        window.addEventListener('keyup',(e) =>{
+            if(e.keyCode == 37){
+                teclado.esquerda = false
+            } else if(e.keyCode == 39){
+                teclado.direita = false
+            }
+         })
+         const game = ()=>{
+            contexto.clearRect(0,0,500,500)
+            jogador.desenhar()
+            requestAnimationFrame(game)
+         }
+         requestAnimationFrame(game)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #meuCanvas{
+            border: 1px solid black;
+            border-radius: 2px;
+        }
+    </style>
+    <title>Aula 1</title>
+</head>
+<body>
+    <canvas id="meuCanvas"  height="500" width="750">
+        <p>Sei Lá</p>
+    </canvas>
+    <script>
+        const meuCanvas = document.getElementById('meuCanvas')
+        const contexto = meuCanvas.getContext('2d')
+
+        contexto.fillStyle = "#00f"
+        contexto.fillRect(0,0,100,100)
+
+        contexto.fillStyle = "#f00"
+        contexto.fillRect(100,100,100,100)
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11</title>
+</head>
+<body>
+    <canvas id="meuCanvas" height="500" width="500" style="border: 1px solid black; border-radius: 2px;">
+    </canvas>
+    <script>
+        const canva = document.getElementById('meuCanvas')
+        const contexto = canva.getContext('2d')      
+        let sprite = new Image()
+        let estrela = new Image()
+        estrela.src = 'Estrela1.png'
+        sprite.src = 'sprites-mario-andando.png'
+         let nSprites= 0
+         let Limagem = 0
+         let x = 0
+         let LSprites = 0
+         sprite.addEventListener('load',()=>{
+             Limagem = sprite.width
+             LSprites = Limagem / 4
+             x = LSprites * nSprites
+             contexto.drawImage(sprite,10,0,100,50)
+             contexto.drawImage(sprite,x,0,LSprites,32,200,0,25,50)
+         })
+
+         let anima = setInterval(()=>{
+             contexto.clearRect(0,0,500,500)
+             nSprites++
+             x = LSprites * nSprites
+             if(nSprites >= 3){
+                nSprites = 0
+             }
+            contexto.drawImage(sprite,x,0,LSprites,32,200,0,25,50)
+         },100)
+        let totalQuadros = 4
+        let QuadroAtual = 0
+        let QuadroX
+        let larguraImagem = estrela.width
+        let LarguraQuadro = larguraImagem / totalQuadros        
+        estrela.addEventListener('load',()=>{
+            QuadroX = LarguraQuadro * QuadroAtual
+            contexto.drawImage(estrela,QuadroX,0,LarguraQuadro,16,100,100,40,40)
+        })
+        let animaEstrela = setInterval(()=>{
+            QuadroAtual++
+            QuadroX = LarguraQuadro * QuadroAtual
+            if(QuadroAtual >= 3){
+                QuadroAtual = 0
+            }
+            contexto.drawImage(estrela,QuadroX,0,LarguraQuadro,16,100,100,40,40)            
+        },100)
+    </script>
+</body>
+</html>

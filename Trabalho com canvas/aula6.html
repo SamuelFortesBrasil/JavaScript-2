@@ -1,0 +1,48 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 6</title>
+</head>
+<body>
+    <canvas id="meuCanvas" height="500" width="500" style="border: 1px solid black; border-radius: 2px;">
+    </canvas>
+      <script>
+            const meuCanvas = document.getElementById('meuCanvas')
+            const contexto = meuCanvas.getContext('2d')
+            let x = 0
+            let y = 0
+            let altura = 0
+            let direcao = 1
+            let anima 
+            const desenha = () =>{
+                contexto.clearRect(0,0,500,500)
+                contexto.fillStyle ='blue'
+                contexto.lineWidth = 3
+                contexto.strokeStyle = 'green'
+                contexto.fillRect(x,y,50,50)
+                contexto.strokeRect(x,y,50,50)
+                x += direcao
+                y += altura
+                if((x <= 0) && (y<= 0)){
+                    direcao = 1
+                    altura = 0
+                }
+                if(x >= 450){
+                    direcao = 0
+                    altura = 1
+                }
+                if((y >= 450) && (x >= 450)){
+                    direcao = -1
+                    altura = 0
+                }
+                if((x <= 0 ) && (y >= 450)){
+                    direcao = 0
+                    altura = -1
+                }
+                anima = requestAnimationFrame(desenha)
+            }
+                desenha()
+    </script>
+</body>
+</html>

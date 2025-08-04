@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10</title>
+</head>
+<body>
+    <canvas id="meuCanvas" height="500" width="500" style="border: 1px solid black; border-radius: 2px;">
+    </canvas>
+    <script>
+        const canva = document.getElementById('meuCanvas')
+        const contexto = canva.getContext('2d')        
+        let sprite = new Image()
+        sprite.src = 'sprites-mario-andando.png'
+        sprite.addEventListener('load',()=>{
+            contexto.drawImage(sprite,0,0,100,50)
+            contexto.drawImage(sprite,55,0,18,32,200,0,25,50)
+        })
+        function desenha(){
+
+        }
+
+        desenha()
+    </script>
+</body>
+</html>

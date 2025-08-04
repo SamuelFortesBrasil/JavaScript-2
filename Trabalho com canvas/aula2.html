@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #meuCanvas{
+            border: 1px solid black;
+            border-radius: 2px;
+        }
+    </style>
+        <script>
+            const desenha = () =>{
+                const meuCanvas = document.getElementById('meuCanvas')
+                const contexto = meuCanvas.getContext('2d')
+
+                contexto.fillStyle = "#00f"
+                contexto.fillRect(2,2,100,100)
+                contexto.fillStyle = "green"
+                contexto.fillRect(104,2,100,100)
+                contexto.fillStyle = "#f00"
+                contexto.fillRect(104,104,100,100)
+                contexto.fillStyle = "pink"
+                contexto.fillRect(2,104,100,100)
+                contexto.clearRect(92,94,20,20)
+            }
+    </script>
+    <title>Aula 2</title>
+</head>
+<body onload="desenha()">
+    <canvas id="meuCanvas" height="500" width="750" style="border: 1px solid black; border-radius: 2px;">
+    </canvas>
+</body>
+</html>

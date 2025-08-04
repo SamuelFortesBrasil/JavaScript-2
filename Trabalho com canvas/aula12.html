@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 12</title>
+</head>
+<body>
+    <canvas id="meuCanvas" height="500" width="500" style="border: 1px solid black; border-radius: 2px;">
+    </canvas>
+    <script>
+        const canva = document.getElementById('meuCanvas')
+        const contexto = canva.getContext('2d')      
+        let sprite = new Image()
+        sprite.src = 'sprites-mario-andando.png'
+         let nSprites= 0
+         let Limagem = 0
+         let x = 0
+         let LSprites = 0
+
+        let posiX = 0
+        let PosiY = 0
+        let vel = 3
+
+         sprite.addEventListener('load',()=>{
+             Limagem = sprite.width
+             LSprites = Limagem / 4
+             x = LSprites * nSprites
+             contexto.drawImage(sprite,10,0,100,50)
+             contexto.drawImage(sprite,x,0,LSprites,32,posiX,PosiY,25,50)
+         })
+
+         let anima = setInterval(()=>{
+             contexto.clearRect(0,0,500,500)
+             nSprites++
+             x = LSprites * nSprites
+             if(nSprites >= 3){
+                nSprites = 0
+             }
+             contexto.drawImage(sprite,x,0,LSprites,32,posiX,PosiY,25,50)
+         },100)
+         
+         window.addEventListener('keydown',(e) =>{
+            if(e.keyCode == 37){
+                posiX -= vel
+            } else if(e.keyCode == 39){
+                posiX += vel
+            }
+         })
+
+    </script>
+</body>
+</html>

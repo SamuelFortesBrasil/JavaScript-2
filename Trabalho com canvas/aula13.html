@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 13</title>
+</head>
+<body>
+    <canvas id="meuCanvas" height="500" width="500" style="border: 1px solid black; border-radius: 2px;">
+    </canvas>
+    <script>
+        const canva = document.getElementById('meuCanvas')
+        const contexto = canva.getContext('2d')      
+        let sprite = new Image()
+        sprite.src = 'sprites-mario-andando.png'
+        let FrameTotais = 4
+        let FrameX 
+        let FrameY = 0
+        let LarguraImagem = sprite.width
+        let LarguraFrame = LarguraImagem / FrameTotais
+        let posiX = 0
+        let PosiY = 0
+        let w = 25
+        let FrameAtual = 0
+        let h = 50
+        let vel = 1.5
+        let esquerda = false
+        let direita = false
+
+          sprite.addEventListener('load',()=>{
+            FrameX = LarguraFrame * FrameAtual
+              contexto.drawImage(sprite,FrameX,0,LarguraFrame,32,posiX,PosiY,w,h)
+         })
+
+        //  let anima = setInterval(()=>{
+        //      contexto.clearRect(0,0,500,500)
+        //      nSprites++
+        //      x = LSprites * nSprites
+        //      if(nSprites >= 3){
+        //         nSprites = 0
+        //      }
+        //      contexto.drawImage(sprite,x,0,LSprites,32,posiX,PosiY,25,50)
+        //  },100)
+
+        const desenha = () =>{
+            contexto.clearRect(0,0,500,500)
+              contexto.drawImage(sprite,FrameX,0,LarguraFrame,32,posiX,PosiY,w,h)
+        }
+
+         
+         window.addEventListener('keydown',(e) =>{
+            if(e.keyCode == 37){
+                esquerda = true
+            } else if(e.keyCode == 39){
+                direita = true
+            }
+         })
+
+        window.addEventListener('keyup',(e) =>{
+            if(e.keyCode == 37){
+                esquerda = false
+            } else if(e.keyCode == 39){
+                direita = false
+            }
+         })
+         const game = ()=>{
+            if(direita == true){
+                posiX += vel
+            }
+            if(esquerda == true){
+                posiX -= vel
+            }
+            requestAnimationFrame(game)
+            desenha()
+         }
+         requestAnimationFrame(game)
+
+    </script>
+</body>
+</html>

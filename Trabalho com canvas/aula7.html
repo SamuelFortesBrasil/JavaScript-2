@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Aula 07</title>
+</head>
+<body>
+    <canvas id="meuCanvas" height="500" width="500" style="border: 1px solid black; border-radius: 2px;">
+    </canvas>
+    <script>
+        const canva = document.getElementById('meuCanvas')
+        const contexto = canva.getContext('2d')
+        function desenho(){
+            // contexto.clearRect(0,0,500,500)
+            // contexto.fillStyle = 'blue'
+            contexto.arc(100,100,90,0,(Math.PI/180) * 180,true)
+            contexto.fill()
+            contexto.beginPath()
+            contexto.fillStyle = 'blue'
+            contexto.arc(100,100,90,0,(Math.PI / 180) * 90,false)
+            contexto.fill()
+        }
+        desenho()
+    </script>
+</body>
+</html>
