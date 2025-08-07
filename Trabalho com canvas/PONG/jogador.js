@@ -6,7 +6,7 @@ class Jogador{
         this.largura = 10
         this.x = 100
         this.y = (ctx.canvas.height / 2) - (this.altura/ 2)
-        this.velocidade = 2
+        this.velocidade = 3.5
 
         
     }

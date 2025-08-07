@@ -1,6 +1,7 @@
 class Bola{
-    constructor(ctx){
+    constructor(ctx,jogador){
         this.ctx = ctx
+        this.jogador = jogador
         this.movendo = false
         this.direcaoX = 0
         this.direcaoY = 0
@@ -8,7 +9,7 @@ class Bola{
         this.largura = 20
         this.x = (ctx.canvas.width / 2) - (this.altura/ 2)
         this.y = (ctx.canvas.height / 2) - (this.altura/ 2)
-        this.velocidade = 5
+        this.velocidade = 3.9
         this.i = 0
 
         
@@ -39,6 +40,10 @@ class Bola{
                 }
                 if(this.y <= 0){
                     this.direcaoY = 1
+                }
+                if((this.x <= this.jogador.x + this.jogador.largura && this.x + this.largura >= this.jogador.x) && (this.y+this.altura >= this.jogador.y && this.y <= this.jogador.y + this.jogador.altura)){
+                        this.direcaoX *= -1
+                   //     this.direcaoY = ((this.y +(this.altura/2))-(this.jogador.y +(this.jogador.altura/2)))/8
                 }
             }
     }
