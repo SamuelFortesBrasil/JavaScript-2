@@ -3,10 +3,10 @@ class Inimigo{
         this.ctx = ctx
         this.bola = bola
         this.altura = 100
-        this.largura = 10
+        this.largura = 20
         this.x =  650
         this.y = (ctx.canvas.height / 2) - (this.altura/ 2)
-        this.velocidade = 4.8
+        this.velocidade = 3.5
         this.origemX = this.x
         this.origemY = this.y
         

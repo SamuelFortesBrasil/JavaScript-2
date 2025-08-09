@@ -7,6 +7,7 @@
     <script src="jogador.js"></script>
     <script src="bola.js"></script>
     <script src="inimigo.js"></script>
+    <script src="placar.js"></script>
     <style>
         button{
             font-size: large;
@@ -26,6 +27,10 @@
     <button id="start" onclick="bola.iniciar()">Start</button>
     <button id="pause" onclick="bola.pause()">Pause</button>
     <script>
+
+        let pontoJogador = 0
+        let pontoInimigo = 0
+
         let canvas = document.getElementById('desenho1')
         let ctx = canvas.getContext('2d')
 
@@ -36,9 +41,12 @@
             baixo:false
         }
 
+
+        const placar = new Placar(ctx,pontoJogador,pontoInimigo)
         const jogador = new Jogador(ctx,teclado)
         const bola = new Bola(ctx,jogador)
         const inimigo = new Inimigo(ctx,bola)
+
         //const bola = new Bola(ctx,jogador)
          window.addEventListener('keydown',(e) =>{
             if(e.keyCode == 37){
@@ -71,6 +79,7 @@
             jogador.desenhar()
             inimigo.desenhar()
             bola.desenhar()
+            placar.desenhar()
              ctx.fillStyle = '#fff99e'
              ctx.fillRect(canvas.width / 2,0,3,500)
             requestAnimationFrame(game)

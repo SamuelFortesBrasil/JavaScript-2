@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 22</title>
+</head>
+<body>
+    <canvas id="desenho1" width="400" height="200" style="border: 1px solid black;">
+        <p>seu browser não é compatível com o canvas</p>
+    </canvas>
+    <script>
+        let canvas = document.getElementById('desenho1')
+        let ctx = canvas.getContext('2d')
+        ctx.font = '30px arial'
+        ctx.fillStyle = 'white'
+        ctx.strokeText('Samuel',10,100)
+       // ctx.beginPath()
+        ctx.fillStyle = 'blue'
+        ctx.fillText('Samuel',200,100)
+    </script>
+</body>
+</html>
