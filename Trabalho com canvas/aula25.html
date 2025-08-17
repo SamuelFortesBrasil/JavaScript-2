@@ -1,0 +1,22 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 25</title>
+</head>
+<body>
+    <canvas id="meuCanvas" height="500" width="500" style="border: 1px solid black; border-radius: 2px;">
+    </canvas>
+      <script>
+            const meuCanvas = document.getElementById('meuCanvas')
+            const contexto = meuCanvas.getContext('2d')
+
+            contexto.shadowColor = 'black'
+            contexto.shadowBlur = 20
+            contexto.shadowOffsetX = 10
+            contexto.shadowOffsetY = 10
+            contexto.fillStyle ='#f00'
+            contexto.fillRect(100,100,200,200)            
+       </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 37 & 38</title>
+</head>
+<body>
+    <canvas id="meuCanvas" height="500" width="500" style="border: 1px solid black; border-radius: 2px;">
+    </canvas>
+      <script>
+            const meuCanvas = document.getElementById('meuCanvas')
+            const ctx = meuCanvas.getContext('2d')
+
+            const JogadorDados= {
+                vidas: 1,
+                velocidade : 5,
+                numeroSprites: 0,
+                linhaSprite: 0,
+                PosicaoX: 0,
+                PosicaoY: 0,
+                imagem: 'mario.png',
+                largura: 12,
+                altura: 32,
+                spritesLinha: 4,
+                spritesColuna: 1,
+                alturaFinal: 25,
+                larguraFinal: 50,
+                direcaoX : 0,
+                direcaoY : 0,
+                esquerda: false,
+                direita: false,
+                baixo: false,
+                cima: false,
+                atrasoSprite: 5,
+                maxAtrasoSprite: 5,
+                jogadorImg: new Image(),
+            }
+
+            const desenhar = (ctx,dados)=>{
+                dados.jogadorImg.src = dados.imagem
+                if(dados.PosicaoX < 0){
+                    dados.PosicaoX = 0
+                }
+                if(dados.PosicaoX > ctx.canvas.with - dados.larguraFinal){
+                    dados.PosicaoX = ctx.canvas.width - dados.larguraFinal
+                }
+                if(dados.PosicaoY < 0){
+                    dados.PosicaoY = 0
+                }
+                if(dados.PosicaoY > ctx.canvas.height - dados.alturaFinal){
+                    dados.PosicaoY = ctx.canvas.height - dados.alturaFinal
+                }
+
+                dados.PosicaoX += dados.direcaoX * dados.velocidade
+                dados.PosicaoY += dados.direcaoY * dados.velocidade
+
+                // if(dados.esquerda) dados.linhaSprite = 1
+                // if(dados.direita) dados.linhaSprite = 0
+                // if(dados.baixo) dados.linhaSprite = 2
+                // if(dados.baixo) dados.linhaSprite = 3
+
+                ctx.drawImage(dados.jogadorImg,(dados.jogadorImg.width/ dados.spritesLinha) * dados.numeroSprites,(dados.jogadorImg.height/dados.spritesColuna)* dados.spritesLinha,dados.largura,dados.altura,dados.PosicaoX,dados.PosicaoY,dados.larguraFinal,dados.alturaFinal);
+
+                if(dados.andando){
+                    if(dados.atrazoSprite > 0){
+                        dados.atrasoSprite --
+                    }else{
+                        dados.atrasoSprite = dados.maxAtrasoSprite
+                        if(dados.numeroSprites < dados.spritesColuna -1){
+                            dados.numeroSprites ++
+                        }
+                        else{
+                            dados.numeroSprites = 0
+                        }
+                    }
+                } else{
+                    dados.numeroSprites = 0
+                }
+            }
+
+
+    </script>
+</body>
+</html>
