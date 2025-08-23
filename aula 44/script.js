@@ -25,20 +25,57 @@ class Bola{
         this.ABolas = ABolas
         this.id = Date.now()+ "_"+(Math.random()*100000000000)
         this.desenhar()
-        this.controle = setInterval(this.controlar,10)
+        this.controle = setInterval(() => this.controlar(),10)
         this.eu = document.getElementById(this.id)
+        numBolas++
+        nObjetos.innerHTML = numBolas
     }
+
     posicao(){
-
+        return this.ABolas.indexOf(this)
     }
+
     remover(){
-
+        clearInterval(this.controle)
+        bolas = bolas.filter((b)=>{
+            if(b.id != this.id){
+                return b
+            }
+        })
+        this.eu.remove()
+        numBolas --
+        nObjetos.innerHTML = numBolas
     }
+
     desenhar(){
-
+        const div = document.createElement('div')
+        div.setAttribute('id',this.id)
+        div.setAttribute('class','bola')
+        div.setAttribute('style',`left:${this.x}px;top:${this.y}px;width: ${this.tamanho}px;height: ${this.tamanho}px;background-color:rgb(${this.r},${this.g},${this.b})`)
+        palco.appendChild(div)
     }
-    controlar(){
 
+    colisao(){
+        if(this.x + this.tamanho >= larguraPalco){
+            this.dirX = -1
+        } else if(this.x <= 0 ){
+            this.dirX = 1
+        }
+        if(this.y + this.tamanho >= alturaPalco){
+            this.dirY = -1
+        } else if(this.y <= 0){
+            this.dirY = 1
+        }
+    }
+
+    controlar(){
+        this.colisao()
+        this.x += this.dirX * this.velX
+        this.y += this.dirY * this.velY
+        this.eu.setAttribute('style',`left:${this.x}px;top:${this.y}px;width: ${this.tamanho}px;height: ${this.tamanho}px;background-color:rgb(${this.r},${this.g},${this.b})`)
+        if((this.x > larguraPalco)|| (this.y >alturaPalco)){
+            this.remover()
+        }
     }
 }
 
@@ -52,12 +89,12 @@ window.addEventListener('resize',(e)=>{
 adicionar.addEventListener('click',(e)=>{
     const quantidadeF = quantidade.value
     for(let i = 0 ; i < quantidadeF; i++){
-
+        bolas.push(new Bola(bolas,palco))
     }
 })
 
 remover.addEventListener('click',(e)=>{
-    bolas.map((el)=>{
-
+    bolas.map((b)=>{
+        b.remover()
     })
 })
