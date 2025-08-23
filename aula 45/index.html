@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Aula 45</title>
+</head>
+<body>
+    <h1>Js Samuel</h1>
+    <form onsubmit="event.preventDefault">
+        <input type="type" name="url" id="url" placeholder="https://github.com/SamuelFortesBrasil" pattern="https//.*" size="30" required>
+        <button id="bt_ir">IR</button>
+    </form>
+    <script>
+        const url = document.getElementById('url')
+        const bt_url = document.getElementById('bt_ir')
+
+        bt_url.addEventListener('click',(e)=>{
+            window.location = url.value
+        })
+    </script>
+</body>
+</html>
