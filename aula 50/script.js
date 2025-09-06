@@ -1,5 +1,5 @@
-import Omelhor,{ MariosKart,getTodosMario } from "./script02.js";
+import Consoles from "./script02.js";
 
-console.log(MariosKart)
-console.log(getTodosMario())
-console.log(Omelhor)
+Consoles.addconsole('Master System')
+
+console.log(Consoles.todosConsoles())
