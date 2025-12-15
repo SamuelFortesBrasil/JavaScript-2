@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Catch 01</title>
+</head>
+<body>
+    <script>
+        const n1 = prompt("Digite um Número:")
+        const n2 = prompt("Digite outro Número:")
+
+
+        try{
+            const divisao = Number(n1) / Number(n2)
+             if(Number(n2) === 0){
+                throw new Error('o denominador não pode ser 0')
+             }
+            alert(`O resultado da Divisão é: ${divisao}`)
+        } catch(e){
+            alert("Não foi possível realizar a divisão pois: "+ e.message)
+            location.reload()
+        }
+
+
+
+    </script>
+</body>
+</html>
