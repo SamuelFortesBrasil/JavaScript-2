@@ -6,6 +6,22 @@
     <title>Exercício de Lógica</title>
 </head>
 <body>
-    
+    <script>
+        /*
+         11 - Faça um algoritmo que leia quatro notas obtidas por um aluno, calcule a média das nota obtidas, imprima na tela o nome do aluno e 
+
+            se o aluno foi aprovado ou reprovado. Para o aluno ser considerado aprovado sua média final deve ser maior ou igual a 7. 
+        */
+       let n1 = Number(prompt("Digite a primeira nota:"))
+       let n2 = Number(prompt("Digite a segunda nota:"))
+       let n3 = Number(prompt("Digite a terceira nota:"))
+       let n4 = Number(prompt("Digite a quarta nota:"))
+       let media = (n1 + n2 + n3 + n4) / 4
+       if(media < 6 ){
+            document.write(`Sua nota foi abaixo da média: ${media.toFixed(1)} aluno reprovado!`)
+       } else{
+            document.write(`Sua nota foi acima da média: ${media.toFixed(1)} aluno aprovado!`)
+       }
+    </script>
 </body>
 </html>
