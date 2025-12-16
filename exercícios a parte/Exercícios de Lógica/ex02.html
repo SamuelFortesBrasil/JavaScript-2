@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Lógica</title>
+</head>
+<body>
+    <script>
+        //2 - Faça um algoritmo para receber um número qualquer e imprimir na tela se o número é par ou ímpar, positivo ou negativo.
+        let i = 0
+        do{
+            let valor = prompt('Digite um valor: ')
+            let convertido = Number(valor)
+            let tipo = typeof convertido
+            console.log(tipo)
+            if(isNaN(convertido) || convertido === 0 ){
+                alert('Não é possível processar valores invalidos!')
+            }else{
+                let teste = Number(valor) % 2
+                 teste === 0 ? document.write(`O valor ${valor} é par`) : document.write(`O valor ${valor} é impar`)
+                i++
+            }
+        }while(i != 1)
+    </script>
+</body>
+</html>

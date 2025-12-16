@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Lógica</title>
+</head>
+<body>
+    <script>
+        //3 - Faça um algoritmo que leia dois valores inteiros A e B, se os valores de A e B forem iguais, deverá somar os dois valores, caso contrário devera multiplicar A por B. Ao final de qualquer um dos cálculos deve-se atribuir o resultado a uma variável C e imprimir seu valor na tela.
+
+        let A = prompt('Digite um valor: ')
+        Number(A)
+        let B = prompt('Digite outro valor: ')
+        Number(B)
+        let C
+        if(A === B){
+            C = Number(A) + Number(B)
+            document.write(`Os valor são iguais e sua soma é ${C}`)
+        } else{
+            C = Number(A) * Number(B)
+            document.write(`Os valores são diferentes e seu produto é ${C}`)
+        }
+    </script>
+</body>
+</html>
