@@ -6,6 +6,18 @@
     <title>Exercício de Lógica</title>
 </head>
 <body>
-    
+    <script>
+        //8 - Faça um algoritmo que leia três valores inteiros diferentes e imprima na tela os valores em ordem decrescente.
+        let Array = []
+        let a = Number(prompt('Digite o valor A: '))
+        let b = Number(prompt('Digite o valor B: '))
+        let c = Number(prompt('Digite o valor C: '))
+        Array.push(a,b,c)
+        Array.sort((a,b) => b - a)
+        Array.forEach(element => {
+            document.write(`O valor é ${element} </br>`)
+        });
+
+    </script>
 </body>
 </html>

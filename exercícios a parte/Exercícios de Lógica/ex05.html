@@ -6,6 +6,12 @@
     <title>Exercício de Lógica</title>
 </head>
 <body>
-    
+    <script>
+        //5 - Faça um algoritmo que leia o valor do salário mínimo e o valor do salário de um usuário, calcule quantos salários mínimos esse usuário ganha e imprima na tela o resultado. (Base para o Salário mínimo R$ 1.293,20).
+        let salarioMin = Number(prompt('Qual é o salário Mínimo atual: '))
+        let salario = Number(prompt('Qual o seu salário: '))
+        let fracSalario = salario / salarioMin
+        document.write(`Seu salário sendo ${salario}, você ganha ${fracSalario.toFixed(1)} salários`)
+    </script>
 </body>
 </html>

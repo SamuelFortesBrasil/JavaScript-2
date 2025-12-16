@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            align-items: center;
+            justify-items: center;
+            flex-wrap: wrap;
+        }
+
+        div{
+            width: 30vw;
+        }
+
+        input{
+            margin: 5px;
+        }
+
+        #res{
+            font-size: 24px;
+        }
+
+    </style>
+    <title>????</title>
+</head>
+<body>
+    <h1>Código de Cálculo de Média</h1> 
+    <h2>-------------------------------------------------</h2>
+    <div>
+        <input type="number" id="n1" required>
+        <input type="number" id="n2" required>
+        <input type="number" id="n3" required>
+        <input type="submit" value="Enviar" id="envio">
+    </div>
+    <h2>-----------------------------------------------</h2>
+    <div id="res"></div>
+
+    <script>
+        const btEnvio = document.getElementById('envio')
+        const res = document.getElementById('res')
+
+        btEnvio.addEventListener('click',(e) =>{
+             alert('O cálculo de médias de não importa.')
+            let p = document.createElement('p')
+            p.innerHTML = 'O que importa é eu e você ficarmos juntos. Isso é 0 bugs e 0 erros! <b>EU TE AMO!!!</b>'
+            res.appendChild(p)
+        })
+    </script>
+</body>
+</html>
