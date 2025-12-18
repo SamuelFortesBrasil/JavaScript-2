@@ -6,6 +6,18 @@
     <title>Exercício de Lógica</title>
 </head>
 <body>
-    
+    <script>
+        //14 - Faça um algoritmo que receba um valor A e B, e troque o valor de A por B e o valor de B por A e imprima na tela os valores.
+
+        let A = prompt('Digite o valor de A: ') 
+        document.write(`O valor inicial de A era: ${A} </br>`)
+        let B = prompt(`Digite o valor de B: `)
+        document.write(`O valor inicial de B era ${B} </br>`)
+        let temp = A
+        A = B
+        B = temp
+        document.write(`Valor novo de A : ${A} </br>`)
+        document.write(`Valor novo de B: ${B}`)
+    </script>
 </body>
 </html>

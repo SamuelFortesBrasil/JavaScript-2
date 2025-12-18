@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Lógica</title>
+    <style>
+        ul{
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="minhadiv">
+        <ul>
+        </ul>
+    </div>
+    <script>
+        //19 - Faça um algoritmo que imprima na tela a tabuada de 1 até 10.
+        let minhaDiv = document.getElementById('minhadiv')
+        let ul = document.querySelector('ul')
+        let f1 = 1
+        let f2 = 1
+        while(f1 !== 11){
+            if(f2 === 11){
+                let novaUl = document.createElement('ul')
+                minhaDiv.appendChild(novaUl)
+                f2 = 1
+                f1++
+                if(f1 === 11){
+                    break
+                }
+            }
+            let multi = f1 * f2
+            let novoLi = document.createElement('li')
+            novoLi.innerHTML = `${f1} X ${f2} = ${multi}`
+            ul.appendChild(novoLi)
+
+            f2++
+        }
+    </script>
+</body>
+</html>

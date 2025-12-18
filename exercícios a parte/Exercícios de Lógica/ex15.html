@@ -6,6 +6,29 @@
     <title>Exercício de Lógica</title>
 </head>
 <body>
-    
+    <script>
+        /*
+            15 - Faça um algoritmo que leia o ano em que uma pessoa nasceu, imprima na tela quantos anos, meses e dias essa pessoa ja viveu. Leve em consideração o ano com 365 dias e o mês com 30 dias.
+
+            (Ex: 5 anos, 2 meses e 15 dias de vida)
+        */
+       let data = new Date()
+       let anoAtual = data.getFullYear()
+       let mes = data.getMonth() + 1
+       let dia = data.getDate()
+       
+        let anoNasc = Number(prompt('Digite o seu Ano de nascimento: '))
+        let mesNasc = Number(prompt('Digite o Número do mês que você nasceu: '))
+        let diaNasc = Number(prompt("Digite o dia que você nasceu: "))
+
+        let totalAnos = anoAtual - anoNasc
+        let totalMes = mes - mesNasc
+        totalMes =  mes < mesNasc ? totalMes * (-1): totalMes
+        let totalDia = dia - diaNasc
+        totalDia = dia < diaNasc ? totalDia * (-1): totalMes
+     
+        document.write(`Você viveu aproximadamente ${totalAnos} anos, ${totalMes} meses e ${totalDia} dia(s)`)
+
+    </script>
 </body>
 </html>

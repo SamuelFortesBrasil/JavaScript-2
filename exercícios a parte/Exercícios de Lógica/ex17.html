@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Lógica</title>
+</head>
+<body>
+    <script>
+        //17 - Faça um algoritmo que leia uma temperatura em Fahrenheit e calcule a temperatura correspondente em grau Celsius. Imprima na tela as duas temperaturas. Fórmula: C = (5 * ( F-32) / 9)
+
+        let tempF = Number(prompt('Digite a temperatura em Farenheit: '))
+        let conver = 5 * (tempF - 32) / 9
+        document.write(`Temperatura em Farenheit é: ${tempF} , em Celcius sendo: ${(conver).toFixed(2)}`)
+    </script>
+</body>
+</html>

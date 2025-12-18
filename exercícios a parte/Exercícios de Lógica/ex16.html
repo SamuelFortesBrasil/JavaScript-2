@@ -6,6 +6,22 @@
     <title>Exercício de Lógica</title>
 </head>
 <body>
-    
+    <script>
+        //16 - Faça um algoritmo que leia três valores que representam os três lados de um triângulo e verifique se são válidos, determine se o triângulo é equilátero, isósceles ou escaleno.
+
+
+        let A = Number(prompt('Digite o Lado A: ')) 
+        let B = Number(prompt('Digite o Lado B: '))
+        let C = Number(prompt('Digite o Lado C: '))
+        if(A === B && B === C){
+            document.write('Você possui um triângulo equilatero')
+        }
+        if(A === B && B !== C){
+            document.write('Você possui um triângulo Isóceles')
+        }
+        if(A !== B && A !== C && B !== C){
+            document.write('Você possui um triângulo Escaleno')
+        }
+    </script>
 </body>
 </html>

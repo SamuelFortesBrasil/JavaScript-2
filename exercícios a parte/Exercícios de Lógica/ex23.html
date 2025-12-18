@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Lógica</title>
+</head>
+<body>
+    <script>
+    //23 - Faça um algoritmo que efetue o cálculo do salário líquido de um professor. As informações fornecidas serão: valor da hora aula, número de aulas lecionadas no mês e percentual de desconto do INSS. Imprima na tela o salário líquido final.   
+        let valorH = Number(prompt('Qual o valor da hora ?'))
+        let nAulas = Number(prompt('Número de aulas lecionadas: '))
+        let desconto = 0.075
+
+        let numeroDeHoras = nAulas * 0.45
+        //considerando 45 minutos de aula
+        let bruto = valorH * numeroDeHoras
+        console.log(bruto)
+        let liquido = bruto - (bruto * desconto)
+
+        document.write(`O total de horas trabalhas são: ${numeroDeHoras}</br>`)
+        document.write(`O salário final é: ${(liquido).toFixed(2)}`)
+
+    </script>
+</body>
+</html>
