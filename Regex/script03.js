@@ -7,4 +7,27 @@ Mouse Sem Fio (SKU: 11204) - Qtd: 2
 
 Cabo HDMI (SKU: 5541) - Qtd: 5
 
+
+Samuel 
+Saaaaaamuuuuuuelllll
 Telefones registrados: (11) 98888-7777 e 21-33445566. O CEP de entrega é 01310-200. Finalize o processo em https://loja-exemplo.com/checkout?id=992.`
+
+
+const arquivos = [
+    'MeuImg.png',
+    'FakeFile.jpeg',
+    'Gato.jpg',
+    'File.jpeg',
+    'Favicon.ico',
+    'Aquivo.txt'
+]
+
+// const Reg = /Sa+mu+el+/gi
+
+//console.log(Texto.match(Reg))
+
+const Reg = /\.(jpe?g|png)/g
+
+for (const arquivo of arquivos){
+    console.log(arquivo.match(Reg))
+}

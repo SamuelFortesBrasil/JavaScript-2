@@ -10,3 +10,6 @@ Cabo HDMI (SKU: 5541) - Qtd: 5
 Telefones registrados: (11) 98888-7777 e 21-33445566. O CEP de entrega é 01310-200. Finalize o processo em https://loja-exemplo.com/checkout?id=992.`
 
 
+const Reg = /Suporte/gi;
+
+console.log(Texto.replace(Reg,'Samuel'))
