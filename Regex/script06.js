@@ -1,0 +1,1 @@
+// Visite para copiar os shorthands do Regex: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape

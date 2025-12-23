@@ -1,10 +1,13 @@
-const Texto = `No dia 15/03/2024, o usuário 'admin_01' acessou o sistema através do IP 192.168.0.10. Ele tentou realizar uma compra no valor de R$ 1.500,50, mas o cartão final 4422 foi recusado. Entrar em contato com suporte@empresa.com.br ou suporte.tecnico@provedor.net para resolver pendências. O protocolo de atendimento é #ABC-12345.  
-Lista de itens no carrinho:
+const alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz @; 0123456789 ÁÉÍÓÚ áéíóú"
 
-Notebook Gamer (SKU: 99823) - Qtd: 1
+//console.log(alfabeto.match(/[^abc456]+/gi))
 
-Mouse Sem Fio (SKU: 11204) - Qtd: 2
 
-Cabo HDMI (SKU: 5541) - Qtd: 5
+//console.log(alfabeto.match(/[0-4]+/g))
+//console.log(alfabeto.match(/[^A-z]+/g))
 
-Telefones registrados: (11) 98888-7777 e 21-33445566. O CEP de entrega é 01310-200. Finalize o processo em https://loja-exemplo.com/checkout?id=992.`
+
+// Isso não funciona é necessário maior atenção ao projetar Regex com acentuação!!!!!! console.log(alafebeto.match(/[Á-ú]+/))
+
+console.log(alfabeto.match(/\D+/g))
+console.log(alfabeto.match(/\W+/gi))
