@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Validar senha</title>
 </head>
 <body>
-    
-    <script src="script.js"></script>
+    <h1>Insira uma senha abaixo</h1>
+    <form>
+        <input type="text" placeholder="Aa1!@Bb2" minlength="8" maxlength="12" id="senha"   required>
+        <input type="submit" value="validar" id="validar">
+    </form>
+    <script>
+        const validar = document.getElementById("validar")
+        const senha = document.getElementById('senha')
+        const regex = new RegExp(/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%\.,]).+$/gm)
+        
+        senha.addEventListener('input',(e)=>{
+            if(senha.value.length < 8){
+                senha.setCustomValidity('A senha deve conter no minímo 8 caracteres!')
+            }else{
+                senha.setCustomValidity("")
+            }
+        })
+        
+        validar.addEventListener("click",()=>{
+            const testeDeSenha = regex.test(senha.value)
+            if(testeDeSenha === false){
+                senha.setCustomValidity("Padrão não corresponde ao requerido!")
+                senha.value = ""
+            }
+        })
+    </script>
 </body>
 </html>
