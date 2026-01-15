@@ -1,12 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        :root{
+            --corFundo: rgb(201, 201, 201);
+            --corCard: lightgray;
+            --FundoDark: rgb(37, 37, 37);
+            --letrasReverse: white;
+            --CardReverso: rgb(65, 65, 65);
+        }
+
+        body{
+            background-color: var(--corFundo);
+            transition: 0.5s ease;
+        }
+
+        .card{
+            background-color: var(--corCard);
+            padding: 10px;
+            margin: 10px;
+            max-width: 40%;
+            transition: 0.5s ease;
+        }
+
+        .escuro{
+            background-color: var(--FundoDark);
+            color: var(--letrasReverse);
+        }
+        .escuro > div{
+            background-color: var(--CardReverso);
+        }
+    </style>
+    <title>Web Storage</title>
 </head>
 <body>
-    
+    <h1>Teste</h1>
+    <button id="bt">Tema</button>
+    <div class="card"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit debitis inventore saepe magni soluta maiores eius similique quidem, consequatur deserunt, magnam tempore quae amet aut, distinctio rerum aliquam quo doloremque. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit optio ea ipsam dolorum. Possimus porro laborum magni iste, amet sint suscipit id facere voluptatem repellendus aspernatur odit nulla autem corporis!</p></div>
+
+    <div class="card">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum eligendi at nihil illo. Sint vel, vitae dolor temporibus, praesentium delectus culpa inventore fuga adipisci nihil rem debitis officiis, aliquam incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt numquam perspiciatis nemo possimus iste quaerat officiis incidunt tenetur reprehenderit! Consequatur facilis quaerat accusantium doloribus excepturi, vitae sit eveniet velit dolores.</p>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
