@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#principal{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+    width: 300px;
+}
+
+#sub-menu{
+    display: none;
+    flex-direction: column;
+}

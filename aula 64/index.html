@@ -1,12 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Buscador de Endereços</title>
 </head>
 <body>
-    
+    <h1>Encontre sua localização</h1>
+    <div id="principal">
+        <label for="cep">Informe seu CEP: </label>
+        <input type="text" name="cep" id="cep" minlength="8" maxlength="8">
+        <button id="bt-cep">Não sei meu cep</button>
+        <span id="sub-menu">
+            <label for="UF" class="procurar">Informe seu Estado: </label>
+            <input type="text" name="UF" id="UF" class="procurar">
+            <label for="Cidade" class="procurar">Informe sua Cidade:</label>
+            <input type="text" name="Cidade" id="Cidade" class="procurar">
+            <label for="local" class="procurar">Informe seu logradouro: </label>
+            <input type="text" name="local" id="local" class="procurar">
+        </span>
+        <input type="submit" name="enviar" id="enviar">
+    </div>
+    <p id="resposta"></p>
     <script src="script.js"></script>
 </body>
 </html>
