@@ -56,5 +56,9 @@ async function ProcurarCep(){
 
 enviar.addEventListener('click',(e)=>{
     e.preventDefault()
+    resp.innerHTML = 'Aguarde...'
     ProcurarCep()
+    estado.value = ''
+    logradouro.value = ''
+    cidade.value = ''
 })
