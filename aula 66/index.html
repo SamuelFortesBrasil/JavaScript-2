@@ -1,12 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            padding: 10px;
+        }
+        
+        p{
+            padding: 10px;
+            float: left;
+        }
+
+        button{
+            color: white;
+            background-color: green;
+            border: none;
+            margin-top: 5px;
+            padding: 5px;
+        }
+        img{
+            float: inline-end;
+            padding: 10px;
+        }
+
+    </style>
+    <title>Cachorros Fofos</title>
 </head>
 <body>
-    
+    <h1>Exiba Fotos de Cachorros </h1>
+    <p>Clique no botão para mostrar uma foto aleatória!</p>
+    <button id="bt">Exibir</button>
+    <img id="imagem" src="" alt="foto">
+    <p id="erro"></p>
     <script src="script.js"></script>
 </body>
 </html>
