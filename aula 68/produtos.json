@@ -1,0 +1,36 @@
+[
+    {
+        "id": "01",
+        "produto": "processador",
+        "marca": "intel",
+        "modelo":"i7"
+    }
+    ,
+    {
+        "id": "02",
+        "produto": "Mouse",
+        "marca": "Logitech",
+        "modelo":"M90"
+    }
+    ,
+    {
+        "id": "03",
+        "produto": "Monitor",
+        "marca": "Samsung",
+        "modelo":"Syncmaster"
+    }
+    ,
+    {
+        "id": "04",
+        "produto": "impressora",
+        "marca": "HP",
+        "modelo":"P1005"
+    }
+    ,
+    {
+        "id": "05",
+        "produto": "Nintendo Wii",
+        "marca": "nintendo",
+        "modelo": "RLV-003"
+    }
+]
