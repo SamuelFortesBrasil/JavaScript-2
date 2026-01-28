@@ -10,6 +10,7 @@ async function consumo(configDataGrid) {
     try{
         const consumir = await fetch(configDataGrid.endpoint)
         const dados = await consumir.json()
+        divPrincipal.innerHTML = " "
         
         dados.forEach(e => {
             const divLinha = document.createElement('div')
@@ -41,8 +42,25 @@ async function consumo(configDataGrid) {
 
             const divc5 = document.createElement('div')
             divc5.classList.add('c5')
-            divc5.innerHTML = "D E V"
             divLinha.appendChild(divc5)
+
+            const Delete = document.createElement('img')
+            Delete.classList.add('icon')
+            Delete.setAttribute('src','delete.svg')
+            Delete.addEventListener('click',(e)=>{
+                e.target.parentNode.parentNode.firstChild.innerHTML
+            })
+            divc5.appendChild(Delete)
+
+            const edit = document.createElement('img')
+            edit.classList.add('icon')
+            edit.setAttribute('src','edit.svg')
+            divc5.appendChild(edit)
+
+            const view = document.createElement('img')
+            view.classList.add('icon')
+            view.setAttribute('src','view.svg')
+            divc5.appendChild(view)
 
             divPrincipal.appendChild(divLinha)
         });
@@ -53,10 +71,4 @@ async function consumo(configDataGrid) {
 
 consumo(configDataGrid)
 
-//<div class="dataLinha">
-// <div class="c1">01</div>
-//<div class="c2">Processador</div>
-//<div class="c3">Intel</div>
-//<div class="c4">i7</div>
-//<div class="c5">D E V</div>
-//</div>
+

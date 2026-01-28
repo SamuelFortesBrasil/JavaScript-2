@@ -4,19 +4,19 @@
     box-sizing: border-box;
 }
 
-/* O container principal não precisa de flex-direction aqui se as linhas já são flex */
+v
 .dataGrid {
     display: flex;
     flex-direction: column;
-    width: fit-content; /* Faz a borda da tabela envolver apenas as colunas */
+    width: fit-content; 
     margin: 20px;
     font-family: Arial, sans-serif;
 }
 
-/* Unificamos o comportamento do cabeçalho e das linhas */
+
 .titulos, .dataLinha {
     display: flex;
-    align-items: center; /* Alinha o texto verticalmente */
+    align-items: center; /
 }
 
 .titulos {
@@ -26,31 +26,41 @@
     font-weight: bold;
 }
 
-/* Estilo comum para todas as células */
+
 .titulos div, .dataLinha div {
     padding: 10px;
-    border-right: 1px solid rgba(255, 255, 255, 0.1); /* Divisória sutil */
+    border-right: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
-/* Cores das linhas intercaladas */
+
 .dataLinha:nth-child(odd) {
-    background-color: #f2f2f2; /* Um cinza bem claro para leitura */
+    background-color: #f2f2f2; 
 }
 
 .dataLinha:nth-child(even) {
-    background-color: #e0e0e0; /* Um cinza um pouco mais escuro */
+    background-color: #e0e0e0; 
     color: #333;
 }
 
-/* Larguras fixas que garantem o alinhamento vertical */
+
 .c1 { width: 50px; text-align: center; }
 .c2 { width: 180px; }
 .c3 { width: 120px; }
 .c4 { width: 120px; }
-.c5 { width: 120px; text-align: center; }
+.c5 {
+     width: 120px;
+     display: flex;
+     text-align: center; 
+     justify-content: space-around;
+     flex-direction: row-reverse;
+    }
 
-/* Efeito de hover para as linhas de dados */
+
 .dataLinha:hover {
     background-color: #d1e7dd;
     cursor: pointer;
+}
+
+.icon{
+    width: 30px;
 }
