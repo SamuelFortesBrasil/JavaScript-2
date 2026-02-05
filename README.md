@@ -7,8 +7,7 @@ Após aprender o básico com o Professor Gustavo Guanabara, dedico parte do meu 
 - [x] Aprender a manipular arrays
 - [x] Aprender a manipular Html e Css com Javascript
 - [x] Aprender programação assíncrona
-- [ ] Aprender Programação Orientada a Objetos
-- [ ] Aprender um pequeno framework ou biblioteca
-- [ ] Criar um projeto próprio com a linguagem e ir estudar outra
+- [x] Aprender Programação Orientada a Objetos
+- [x] Criar um projeto próprio com a linguagem e ir estudar outra
 ***
 Rumo ao Aprendizado Máximo!
